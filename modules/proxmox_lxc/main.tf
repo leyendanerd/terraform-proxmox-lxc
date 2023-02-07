@@ -5,7 +5,7 @@ resource "proxmox_lxc" "basic" {
   password     = var.password
   unprivileged = true
   rootfs {
-    storage = "local-zfs"
+    storage = var.storage
     size    = var.size
   }
   features {
